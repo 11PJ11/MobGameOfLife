@@ -1,12 +1,28 @@
 ﻿using NUnit.Framework;
+
 namespace GameOfLife.Test
 {
-    public class ClassUnderTestShould
-    {
+    using FluentAssertions;
+    using Src;
 
-        [Test]
-        public void do_something()
+    [TestFixture]
+    public class GameShould
+    {
+        [Test] public void 
+        GenerateEmptyGrid_WhenTicking_GivenAnEmptySeed()
         {
+            Grid emptyGrid = new Grid();
+            Game game = new Game(emptyGrid);
+
+            Grid nextGeneration = game.Tick();
+
+            nextGeneration.Should().Be(emptyGrid);
+        }
+
+        [Test] public void 
+        GenerateEmptyGrid_WhenTicking_GivenGridWithOneCell()
+        {
+            
         }
 
     }

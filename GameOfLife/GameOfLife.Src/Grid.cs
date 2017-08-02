@@ -1,6 +1,6 @@
 ﻿namespace GameOfLife.Src
 {
-    public class ClassUnderTest
+    public class Grid
     {
     }
 }
