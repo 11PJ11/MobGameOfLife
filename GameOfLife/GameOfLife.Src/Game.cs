@@ -11,7 +11,7 @@
 
         public Grid Tick()
         {
-            return _grid;
+            return Grid.Empty();
         }
     }
 }
